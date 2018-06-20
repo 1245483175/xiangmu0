@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>远洋船务</title>
+	<style>
+	 body,ul,p,a,dl {
+	 	margin: 0;
+	 	padding:0;
+	 	list-style: none;
+	 	text-decoration: none;
+	 }
+	 body{
+	 	overflow-x: hidden;
+	 }
+	 .clearfix::after {
+	 	content: '';
+	 	display: block;
+	 	clear: both;
+	 }
+	.top {
+		width: 100%;
+		height: 107px;
+		border-top: 5px solid #09238B;
+	 }
+	 .nav a:hover {
+	 	color: #10298E;
+	 	font-weight: bold;
+	 }
+	 .gwidth {
+	 	width: 1000px;
+	 	margin: 0 auto;
+	 }
+	 .fl {
+	 	float: left;
+	 }
+	 .fr {
+	 	float: right;
+	 }
+	 .top ul li {
+	 	float: left;
+	 }
+	 .top img {
+	 	margin-top: 14px;
+	 	margin-right: 18px;
+	 }
+	 .p1 {
+	 	margin-top: 27px;
+	 	font-size: 21px;
+	 	color: #112161;
+	 	margin-right: 95px;
+	 }
+	 .top ul li {
+	 	margin-top: 56px;
+	 	font-size: 14px;
+	 	margin-right: 26px;
+	 }
+	 .top ul li a {
+	 	color: #333333;
+	 }
+	 .top p:nth-last-child(1) {
+	 	font-size: 14px;
+	 }
+	 .top ul li:nth-last-child(1){
+     margin-right: 0;
+	 }
+	 .banner {
+	 	position: relative;
+	 	width: 100%;
+	 	height: 400px;
+	 	overflow: hidden;
+	 }
+	 .imgs {
+	 	position: absolute;
+	 	display: inline-block;
+	 	width: 5120px;
+	 	left: 0;
+	 	top: 0;
+	 }
+     .imgs span {
+     	display: block;
+     	width: 1536px;
+     	float: left;
+     }
+     .imgs span img{
+     	width: 100%;
+     	height: 400px;
+     }
+     .bannerbottom {
+     	position: absolute;
+     	width: 100%;
+     	height: 40px;
+     	bottom: 0;
+     	opacity: .5;
+     	background: #000;
+     }
+     .btns {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+     }
+     .btns li {
+     	width: 12px;
+     	height: 12px;
+     	border-radius: 5px;
+     	background: #fff;
+     	display: inline-block;
+     	cursor: pointer;
+     	margin-right: 10px;
+     }
+     .btns .active {
+     	background: #134084;
+     }
+     .service {
+     	font-size: 0;
+     }
+     .service img {
+     	cursor: pointer;
+     }
+     .i2 {
+     	margin-top: 27px;
+     }
+     .img2 {
+     	margin-top: 26px;
+     	background: url('imgs/xkt21.gif') no-repeat;
+        width: 256px;
+        height: 154px;
+     }
+     .img2:hover {
+     	background: url('imgs/xkt2-a.gif') no-repeat;
+        width: 256px;
+        height: 154px;
+     }
+     .img3 {
+     	margin-top: 26px;
+     	background: url('imgs/xkt23.gif') no-repeat;
+        width: 256px;
+        height: 154px;
+     }
+     .img3:hover {
+     	background: url('imgs/xkt3-a.gif') no-repeat;
+        width: 256px;
+        height: 154px;
+     }
+     .img4 {
+     	margin-top: 26px;
+     	background: url('imgs/xkt22.gif') no-repeat;
+        width: 256px;
+        height: 154px;
+     }
+     .img4:hover {
+     	background: url('imgs/首页0.png') no-repeat;
+        width: 256px;
+        height: 154px;
+     }
+     .i1 {
+     	margin-left: 33px;
+     	margin-right: 20px;
+     	margin-top: 27px;
+     	margin-bottom: 22px;
+     }
+     .news {
+     	width: 998px;
+     	height: 480px;
+     	border: 1px solid #CCCCCC;
+     	margin-top: 40px;
+     }
+     .content1 {
+     	width: 686px;
+     	border-right:1px solid #CCCCCC;
+     	height: 482px;
+     }
+     .content1top {
+     	width: 686px;
+     	height: 49px;
+     	border-bottom: 1px solid #CCCCCC;
+     }
+     .content1top p {
+     	text-align: right;
+     	line-height: 49px;
+     	font-size: 20px;
+     	color: #656565;
+     	margin-left: 10px;
+     }
+     .content1top a {
+     	font-size: 12px;
+     	color: #0F298D;
+     	margin-right: 10px;
+     }
+     .content1bottom {
+     	box-sizing: border-box;
+     	padding-top: 15px;
+     	padding-left: 10px;
+     	height: 430px;
+     }
+     .box {
+     	width: 100px;
+     	height: 80px;
+     	background: #C4C4C4;
+     	text-align: center;
+     	color: #fff;
+     	line-height: 80px;
+     	font-size: 14px;
+     	margin-right: 16px;
+     	cursor: pointer;
+     }
+     .box:hover {
+     	background: #09238B;
+     }
+     .ps {
+     	font-size: 12px;
+     	line-height: 28px;
+     }
+     .content2 a {
+     	color: #273E99;
+     }
+     .content2 {
+     	padding-bottom: 23px;
+     }
+     .content3 {
+     	width: 311px;
+     	height: 49px;
+     	border-bottom: 1px solid #CCCCCC;
+     }
+     .content3top {
+     	text-align: right;
+     	font-size: 20px;
+     	color: #656565;
+     	line-height: 49px;
+     	margin-left: 10px;
+     }
+     .content3 a {
+     	font-size: 12px;
+     	color: #09238B;
+     	margin-right: 10px;
+     }
+     .middle {
+     	box-sizing: border-box;
+     	width: 311px;
+     	height: 258px;
+     	font-size: 0;
+     	padding-top: 18px;
+     	padding-left: 10px;
+     	border-bottom: 1px solid #CCCCCC;
+     	position: relative;
+     }
+     .imgss .show {
+     	display: block;
+     }
+     .imgss div {
+     	display: none;
+     }
+     .middleul {
+     	float: left;
+     	position: absolute;
+     	right: 10px;
+     	bottom: 18px;
+
+     }
+     .middleul li {
+     	width: 16px;
+     	height: 14px;
+     	background: #7DCABD;
+     	border: 1px solid #7DCABD;
+     	float: left;
+     	margin-left: 1px;
+     	color: #fff;
+     	font-size: 12px;
+     	text-align: center;
+     	line-height: 14px;
+     	cursor: pointer;
+     }
+     .middleul .change1 {
+     	background: #E59948;
+     	border: 1px solid #BC8043;
+     }
+     .content3bottom {
+     	width: 311px;
+     	height: 171px;
+     	padding-top: 20px;
+     	padding-left: 12px;
+     	box-sizing: border-box;
+     }
+     .p4 {
+     	width: 85px;
+     	line-height: 86px;
+     	font-size: 20px;
+     	color: #656565;
+     	text-align: left;
+     }
+     .imgboth {
+     	margin-bottom: 20px;
+     }
+     .imgboth2 {
+     	width: 656px;
+     	margin-left: 22px;
+     	font-size: 0;
+     }
+     .imgboth2 img {
+     	margin-right: 18px;
+     	margin-bottom: 10px;
+     }
+     .imgbox {
+     	width: 90px;
+     	height: 128px;
+     	background: #EDEDED;
+     	color: #808080;
+     	font-size: 36px;
+     	line-height: 36px;
+     	padding-top:75px;
+     	text-align: center;
+     	cursor: pointer;
+     }
+     .imgbox a {
+     font-size: 16px;
+     line-height: 36px;	
+     color: #808080;
+     }
+     .link {
+     	background-image: url('imgs/首页_r12_c1.png');
+     	width: 100%;
+     	height: 74px;
+     	padding-top: 30px;
+     	border-bottom: 4px solid #09238B;
+
+     }
+     .link p {
+     	font-size: 14px;
+     	color:#000000; 
+     }
+     .link a {
+     	line-height: 40px;
+     	font-size:12px;
+     	color: #656565;
+     	margin-right: 50px;
+     }
+     .foot {
+     	width: 100%;
+     	height: 292px;
+     	background: #5F5F5F;
+     	box-sizing: border-box;
+     	padding-top: 26px;
+     }
+     .title {
+     	width: 1000px;
+     	border-bottom: 1px solid #888888;
+     	margin-bottom: 11px;
+     }
+     .title li {
+     	font-size: 12px;
+     	color: #FFFFFF;
+     	float: left;
+     	margin-right: 95px;
+     	margin-bottom: 15px;
+     }
+     .title a {
+     	font-size: 12px;
+     	color: #FFFFFF;
+     }
+     .title .li6 {
+     	margin-right: none;
+     	float: right;
+     }
+     .title2 a {
+     	font-size: 12px;
+     	line-height: 30px;
+     	color: #CBCBCB;
+     	margin-right: 95px;
+     }
+    .title2 .li7 a{
+    	margin-right: 47px;
+    }
+    .title2 .li8 a {
+    	margin-right: 187px;
+    }
+    .pic1 {
+    	font-size: 0;
+    	width: 86px;
+    	height:110px;
+    	font-size: 12px;	
+    	text-align: center;
+    	color: #CBCBCB;
+    }
+    .pic2 {
+    	margin-right: 20px;
+    }
+    .p5 {
+    	line-height: 70px;
+    	font-size: 12px;
+    	color: #CBCBCB;
+    }
+    .nav .a1 a {
+    	color: #09238B;
+    	font-weight: bold;
+    }
+</style>
+</head>
+<body>
+	<div class="top">
+		<div class="gwidth clearfix">
+		<img class="fl" src="imgs/首页_r2_c21.png" alt="logo">
+		<div class="p1 fl">
+	     <p>青岛远洋船务工程有限公司</p>
+	     <p>COSCO Shipyard(Qingdao)Co.ltd</p>
+	    </div>
+	     <ul class="fl nav">
+	     	<li class="a1"><a href="远洋船务.html" target="_blank">首页</a></li>
+	     	<li><a href="关于我们.html" target="_blank">关于我们</a></li>
+	     	<li><a href="技术保障.html" target="_blank">技术保障</a></li>
+	     	<li><a href="船坞说明.html" target="_blank">船坞说明</a></li>
+	     	<li><a href="新闻中心.html" target="_blank">新闻中心</a></li>
+	     	<li><a href="人力资源.html" target="_blank">人力资源</a></li>
+	     	<li><a href="联系我们.html" target="_blank">联系我们</a></li>
+	     </ul>
+	    </div>
+	 </div>
+	 <div class="banner">
+	 	<div class="imgs">
+			<span><img src="imgs/首页_r4_c12.png" alt="banner"></span>
+			<span><img src="imgs/lunchuan-005.jpg" alt="banner"></span>
+			<span><img src="imgs/lunchuan-009.jpg" alt="banner"></span> 	
+		</div>
+	 	<div class="bannerbottom"></div>
+	    <ul class="btns">
+	 	   <li class="active"></li>
+	 	   <li></li>
+	 	   <li></li>
+	    </ul>
+	 </div>
+	 <div class="service clearfix">
+	 	<div class="gwidth">
+	 	<img class="i1 fl" src="imgs/xkt24.gif" alt="t1">
+	 	<div class="img2 fl"></div>
+	 	<div class="img3 fl"></div>
+	 	<div class="img4 fl"></div>
+	 </div>
+	 </div>
+	 <div class="gwidth">
+	 <div class="news">
+	 	<div class="content1 fl">
+	 		<div class="content1top">
+	 			<p class="p2 fl">新闻中心</p>
+	 			<p><a href="javascript:;">更多</a></p>
+	 		</div>
+	 		<div class="content1bottom">
+	 			<div class="content2 clearfix">
+	 			<div class="box fl">2014-04-21</div>
+	 			<div class="ps fl">
+	 			<p class="p3"><a href="javascript:;">司积极贯彻落实“三项法规”和“专项治理工作意见”完善制度建设</a></p>
+	 			<p>船务公司针对中央公布的《关于实行党政领导干部问责的暂行规定》、《中国共产党巡视工作条例……</p>
+	 			<p>READ MORE</p>
+	 		    </div>
+	 		    </div>
+	 		    <div class="content2 clearfix">
+	 		 	<div class="box fl">2014-04-21</div>
+	 		 	<div class="ps fl">
+	 		 	<p class="p3"><a href="javascript:;">司积极贯彻落实“三项法规”和“专项治理工作意见”完善制度建设</a></p>
+	 		 	<p>船务公司针对中央公布的《关于实行党政领导干部问责的暂行规定》、《中国共产党巡视工作条例……</p>
+	 		 	<p>READ MORE</p>
+	 		     </div>
+	 		     </div>
+	 		    <div class="content2 clearfix">
+	 		   	<div class="box fl">2014-04-21</div>
+	 		   	<div class="ps fl">
+	 		   	<p class="p3"><a href="javascript:;">司积极贯彻落实“三项法规”和“专项治理工作意见”完善制度建设</a></p>
+	 		   	<p>船务公司针对中央公布的《关于实行党政领导干部问责的暂行规定》、《中国共产党巡视工作条例……</p>
+	 		   	<p>READ MORE</p>
+	 		   	   </div>
+	 		       </div>
+	 		    <div class="content2 clearfix">
+	 		  	<div class="box fl">2014-04-21</div>
+	 		  	<div class="ps fl">
+	 		  	<p class="p3"><a href="javascript:;">司积极贯彻落实“三项法规”和“专项治理工作意见”完善制度建设</a></p>
+	 		  	<p>船务公司针对中央公布的《关于实行党政领导干部问责的暂行规定》、《中国共产党巡视工作条例……</p>
+	 		  	<p>READ MORE</p>
+	 		      </div>
+	 		      </div>
+	 		</div>
+	 	</div>
+	    <div class="content3 fl">
+	    <div class="content3top">
+	      <p class="p2 fl">船坞说明</p>
+	      <p><a href="javascript:;">更多</a></p>
+	    </div>
+	    <div class="middle">
+	    	<ul class="middleul fl">
+	    		<li class="change1">1</li>
+	    		<li>2</li>
+	    		<li>3</li>
+	    		<li>4</li>
+	    		<li>5</li>
+	    	</ul>
+	    	<div class="imgss">
+	    	<div class="show"><img src="imgs/首页_r9_c12.png" alt="tupian"></div>
+	    	<div><img src="imgs/c1.jpg" alt="tupian"></div>
+	    	<div><img src="imgs/c2.jpg" alt="tupian"></div>
+	    	<div><img src="imgs/c3.jpg" alt="tupian"></div>
+	    	<div><img src="imgs/c4.jpg" alt="tupian"></div>
+	    </div>
+	    </div>
+	    <div class="content3bottom">
+	    	<img src="imgs/首页_r13_c12.png" alt="tu">
+	    </div>
+	    </div>
+	 </div>
+	 <div class="product">
+	 <p class="p4">产品介绍</p>
+	 </div>
+	 <div class="imgboth clearfix">
+	 	<img class="fl" src="imgs/img1.png" alt="i1">
+	 	<div class="imgboth2 fl">
+	 	<img src="imgs/img2.png" alt="i1">
+	 	<img src="imgs/img3.png" alt="i1">
+	 	<img src="imgs/img2.png" alt="i1">
+	 	<img src="imgs/img2.png" alt="i1">
+	 	<img src="imgs/img3.png" alt="i1">
+	 	<img src="imgs/img2.png" alt="i1">
+	 	<img src="imgs/img3.png" alt="i1">
+	 	<img src="imgs/img3.png" alt="i1">
+	 </div>
+	 <div class="imgbox fl">
+	 	<a href="javascript:;">更多+</a>
+	 	<p>-></p>
+	 </div>
+	 </div>
+	 </div>
+	 <div class="link">
+	 	<div class="gwidth">
+	 	<p>友情链接</p>
+	 	<a href="javascript:;">中国远洋运输集团(集团)</a>
+	 	<a href="javascript:;">公司青岛远洋运输公司</a>
+	 	<a href="javascript:;">青岛远洋投资发展有限公司</a>
+	 </div>
+	 </div>
+	 <div class="foot">
+	 	<div class="gwidth">
+	 	<ul class="title clearfix fl">
+	 		<li><a href="javascript:;">关于我们</a></li>
+	 		<li><a href="javascript:;">业务领域</a></li>
+	 		<li><a href="javascript:;">技术保障</a></li>
+	 		<li><a href="javascript:;">新闻中心</a></li>
+	 		<li><a href="javascript:;">人才招聘</a></li>
+	 		<li class="li6"><a href="javascript:;">与清远船务互动</a></li>
+	 	</ul>
+	 	<ul class="title2 clearfix fl">
+	 		<li><a href="javascript:;">公司简介</a></li>
+	 		<li><a href="javascript:;">服务领域</a></li>
+	 		<li><a href="javascript:;">资质荣誉</a></li>
+	 	</ul>
+	 	<ul class="title2 clearfix fl">
+	 		<li class="li7"><a href="javascript:;">船舶航修</a></li>
+	 		<li class="li7"><a href="javascript:;">船舶坞修</a></li>
+	 		<li class="li7"><a href="javascript:;">船舶技术服务</a></li>
+	 		<li class="li7"><a href="javascript:;">船舶物料备件供应</a></li>
+	 	</ul>
+	 	<ul class="title2 clearfix fl">
+	 		<li><a href="javascript:;">技术实力</a></li>
+	 		<li><a href="javascript:;">设备设施</a></li>
+	 	</ul>
+	 	<ul class="title2 clearfix fl">
+	 		<li><a href="javascript:;">企业动态</a></li>
+	 		<li><a href="javascript:;">行业资讯</a></li>
+	 	</ul>
+	 	<ul class="title2 clearfix fl">
+	 		<li class="li8"><a href="javascript:;">人才理念</a></li>
+	 		<li class="li8"><a href="javascript:;">人才招聘</a></li>
+	 	</ul>
+	 	<ul class="fl pic">
+	 		<div class="pic1 fl pic2">
+	 		<img class="i11" src="imgs/首页_r11_c16.png" alt="">
+	 		<p>官方微信</p>
+	 	    </div>
+	 	    <div class="pic1 fl">
+	 		<img src="imgs/首页_r11_c14.png" alt="">
+	 		<p>官方网站</p>
+	 	    </div>
+	 	</ul>
+	 	<div class="line">
+	 		<img src="imgs/首页_r4_c2.png" alt="">
+	 	</div>
+	 	<p class="p5">青岛远洋船务工程有限公司版权所有    鲁ICP备 12345678号    ©2014-2015 COSOCO QDSHIP</p>
+	 </div>
+	 </div>
+	 <script> 
+	 var banner=document.getElementsByClassName('banner')[0];
+	 var imgs=document.getElementsByClassName('imgs')[0];
+	 var btns=document.getElementsByClassName('btns')[0].getElementsByTagName('li');
+	 for(var i=0;i<btns.length;i++){
+	 	btns[i].index=i;
+	 	btns[i].onclick=function(){
+	 		for(var i=0;i<btns.length;i++){
+	 			btns[i].className='';
+	 		}
+	 		this.className='active';
+	 		imgs.style.left=-1536*this.index+'px';
+	 	}
+	 }
+	 var middle=document.getElementsByClassName('middle')[0];
+	 var middleul=document.getElementsByClassName('middleul')[0];
+	 var lis=middleul.getElementsByTagName('li');
+	 var imgss=document.getElementsByClassName('imgss')[0];
+	 var divs=imgss.getElementsByTagName('div');
+	 for(var i=0;i<lis.length;i++){
+	 	lis[i].index=i;
+	 	lis[i].onclick=function(){
+	 		for(var i=0;i<lis.length;i++){
+	 			lis[i].className='';
+	 			divs[i].className='';
+	 		}
+	 		this.className='change1';
+	 		divs[this.index].className='show';
+	 	}
+	 }
+	 </script>
+</body>
+</html>
